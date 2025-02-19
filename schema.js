@@ -29,10 +29,11 @@ const blogPostSchema = new mongoose.Schema({
   createdAt: { type: Date,
                default: Date.now },
   updatedAt: { type: Date },
-  comments: [commentSchema]
+  comments:{
+        type:[mongoose.Schema.Types.ObjectId],
+        ref: 'Comment'
+  } 
 });
 
 
-
-// Export the model
 module.exports = BlogPost;

@@ -19,7 +19,7 @@ app.post('/test_with_mongoose', async (req,res) => {
     const newBlogPost = new BlogPost({
       title: "New Blog Post",
       content: "This is a new blog post",
-    
+    });
   } catch (error) {
     error.response.status(500).send(error.message);
   }
